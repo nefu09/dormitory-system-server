@@ -1,0 +1,8 @@
+server:
+  port:
+spring:
+  datasource:
+    username: root
+    password: nlj6957!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/test?&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
