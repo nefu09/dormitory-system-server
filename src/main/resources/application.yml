@@ -5,4 +5,10 @@ spring:
     username: root
     password: nlj6957!
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost/test?&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    url: jdbc:mysql://localhost/dormitory?&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+logging:
+  level:
+    root: debug
+my:
+  secretkey: R28K42ZEJ8LWRHU5
+  salt: 636eac2534bcfcb0

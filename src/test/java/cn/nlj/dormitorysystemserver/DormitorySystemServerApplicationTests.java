@@ -8,6 +8,7 @@ class DormitorySystemServerApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }

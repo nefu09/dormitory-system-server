@@ -1,38 +1,22 @@
 package cn.nlj.dormitorysystemserver.vo;
 
-public class ResultVO<T> {
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.Map;
+
+@Data
+@Builder
+public class ResultVO {
     private int code;
     private String message;
-    public T date;
+    private Map<String, Object> data;
 
-
-    public ResultVO(int code, String message, T date) {
-        this.code = code;
-        this.message = message;
-        this.date = date;
+    public static ResultVO success(Map<String, Object> data) {
+        return ResultVO.builder().code(200).data(data).build();
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public T getDate() {
-        return date;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public void setDate(T date) {
-        this.date = date;
+    public static ResultVO error(int code, String msg) {
+        return ResultVO.builder().code(code).message(msg).build();
     }
 }
